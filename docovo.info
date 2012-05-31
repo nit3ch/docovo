@@ -1,0 +1,4 @@
+name = Docovo 
+description = Drupal commons voip intergration
+package = VoIP Drupal
+core = 6.x

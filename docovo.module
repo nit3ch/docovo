@@ -1,0 +1,35 @@
+<?php
+$groups = $user->og_groups;
+if($groups){
+    foreach($groups as $group){
+    echo "<li>";
+        print l($group[title], 'node/'.$group[nid]);
+    echo "</li>";
+    }
+}
+else {
+    echo "<li>$user->name has joined no groups</li>";
+    }
+function _voipscriptsamples_group_list() {
+  $script = new VoipScript('voipscript_group_list');
+
+  $script->addLabel('start');
+  $prompt = t("Press 1 for listing of groups. Press 2 for listing subscribed group");
+  $timeout = 5;
+  $end_key = '';
+  $num_digits = 1;
+  $script->addGetInput($prompt, $num_digits, $end_key, $timeout);
+
+  $script->addGotoIf('no input received', "^%input_digits == ''");
+
+  
+$script->addLabel('no input received');
+  $script->addSay(t('No input received. Please try again.'));
+  $script->addGoto('start');
+
+  $script->addLabel('end call');
+  $script->addSay(t('Bye bye'));
+  $script->addHangup();
+
+  return $script;
+}
