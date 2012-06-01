@@ -1,0 +1,11 @@
+1st june : During this period of time i worked on followinf suff.
+
+1. Configuring Drupal Commons with Voip
+Got a account on pantheon to host my site.Installted a fresh copy of drupal commons and all drupal voip modules. Created a  free tropo account (voip service provider) to support my site with voip. Created a applcation on tropo for my site. Caught up with some issues from tropo site (ticket no: #1761972).Mentor suggested me to move to drupal rather than using commons for now. So again created and configured a drupal site accordingly.
+
+2. List the groups
+One of the intermediate task before creating annoncement feature is subscription and unsubscription.created a module to list all the groups and the list of subscribed group.
+Pushed the code on github.
+
+Next week planning ?
+Find the possiblities of user registration via phone. More work on subscription feature.   

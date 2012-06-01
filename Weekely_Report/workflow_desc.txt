@@ -1,0 +1,8 @@
+1. User call a drupal Site.
+2. Either the user is register or not.
+3. If the user is register, user can proceed further after verifying himself.
+4. If the user is not register , he need to register on the website vai phone.
+5. Not sure how to verify the email id while registration.Can you give some idea please.
+6. User verification done.
+7. Listing of groups , user can choose which group to subscribe.
+8. Listing of Subscribed group so that user can can make emergency announcment and unsubscribe the group. 
