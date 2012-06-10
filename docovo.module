@@ -1,0 +1,30 @@
+<?php
+
+include_once('docovo.features.inc');
+
+/**
+ * Implementation of hook_voipscript_load_script().
+ */
+function docovo_voipscript_load_script($script_name, $params = NULL) {
+  if ($script_name == 'docovo_node_script') {
+    module_load_include('inc', 'docovo', 'docovo.script');
+    $node = node_load($params['nid']);
+    return _docovo_node_script($node);
+  }
+  if ($script_name == 'docovo_node_detail_script') {
+    module_load_include('inc', 'docovo', 'docovo.script');
+    $node = node_load($params['nid']);
+    return _docovo_node_detail_script($node);
+  }
+}
+
+/**
+ * Implementation of hook_voipscript_get_script_names().
+ */
+function docovo_voipscript_get_script_names() {
+  return array(
+    'docovo_node_script',
+    'docovo_node_detail_script',
+  );
+} 
+
